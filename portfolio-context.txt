@@ -1,0 +1,232 @@
+﻿=== PORTFOLIO PROJECT STRUCTURE ===
+DIR  node_modules
+DIR  public
+DIR  src
+FILE .gitignore
+FILE .prettierignore
+FILE .prettierrc.json
+FILE eslint.config.js
+FILE index.html
+FILE package-lock.json
+FILE package.json
+FILE portfolio-context.txt
+FILE README.md
+FILE tsconfig.app.json
+FILE tsconfig.json
+FILE tsconfig.node.json
+FILE vite.config.ts
+FILE public\favicon.svg
+FILE public\og-cover.svg
+FILE public\README_RESUME_PLACEHOLDER.txt
+FILE public\robots.txt
+FILE public\sitemap.xml
+DIR  src\components
+DIR  src\content
+DIR  src\sections
+FILE src\App.tsx
+FILE src\index.css
+FILE src\main.tsx
+FILE src\components\Footer.tsx
+FILE src\components\Nav.tsx
+FILE src\components\SectionHeading.tsx
+FILE src\content\philosophy.ts
+FILE src\content\profile.ts
+FILE src\content\projects.ts
+FILE src\content\skills.ts
+FILE src\content\timeline.ts
+FILE src\sections\About.tsx
+FILE src\sections\CareerDirection.tsx
+FILE src\sections\Contact.tsx
+FILE src\sections\Customer360CaseStudy.tsx
+FILE src\sections\EngineeringFocus.tsx
+FILE src\sections\EngineeringLab.tsx
+FILE src\sections\Hero.tsx
+FILE src\sections\Philosophy.tsx
+FILE src\sections\Resume.tsx
+FILE src\sections\Work.tsx
+
+=== PACKAGE.JSON ===
+{
+  "name": "mugheer-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "autoprefixer": "^10.5.4",
+    "eslint": "^10.9.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.4",
+    "globals": "^17.11.0",
+    "postcss": "^8.5.26",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.67.0",
+    "vite": "^8.2.0"
+  }
+}
+
+=== README ===
+# Mugheer Islam Khattak â€” Personal Engineering Website (V1)
+
+A frontend-only personal site built with **React + TypeScript + Vite +
+Tailwind CSS**. No backend, database, auth, or CMS â€” all content is local
+and static, editable directly in source files.
+
+---
+
+## 1. Project structure
+
+```
+src/
+â”œâ”€â”€ components/        Reusable UI (Nav, Footer, SectionHeading)
+â”œâ”€â”€ sections/           One file per page section (Hero, About, Work, ...)
+â”œâ”€â”€ content/             â† EDIT HERE for text/data changes
+â”‚   â”œâ”€â”€ profile.ts        Name, role, contact links, hero copy, nav, about
+â”‚   â”œâ”€â”€ projects.ts       Customer360 + other projects, architecture, practices
+â”‚   â”œâ”€â”€ skills.ts         Engineering Focus categories
+â”‚   â”œâ”€â”€ philosophy.ts     Engineering Philosophy principles
+â”‚   â””â”€â”€ timeline.ts       Career Direction stages + Engineering Lab areas
+â”œâ”€â”€ App.tsx              Assembles all sections in order
+â”œâ”€â”€ main.tsx              App entry point
+â””â”€â”€ index.css             Design tokens (colors, fonts) + base styles
+public/
+â”œâ”€â”€ favicon.svg, og-cover.svg, robots.txt, sitemap.xml
+â””â”€â”€ Mugheer_Islam_Khattak_Resume.pdf   â† ADD THIS FILE (see Â§5)
+```
+
+Content is intentionally separated from UI components, so future updates
+(new project, new skill, tweaked copy) only require editing a file in
+`src/content/`, never the component markup.
+
+---
+
+## 2. Run locally
+
+Requires Node.js 18+.
+
+```bash
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:5173`.
+
+---
+
+## 3. Build for production
+
+```bash
+npm run build      # type-checks, then builds to dist/
+npm run preview    # serve the production build locally to sanity-check it
+```
+
+Other useful scripts:
+
+```bash
+npm run lint          # ESLint
+npm run typecheck     # TypeScript, no emit
+npm run format         # Prettier â€” write
+npm run format:check  # Prettier â€” check only
+```
+
+All four currently pass with zero errors/warnings.
+
+---
+
+## 4. Editable content files
+
+| File                        | Controls                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| `src/content/profile.ts`    | Name, email, GitHub, LinkedIn, hero text, nav links, About paragraphs                      |
+| `src/content/projects.ts`   | Customer360 details, architecture layers, practices, future direction, other project cards |
+| `src/content/skills.ts`     | Engineering Focus categories and their Current/Developing/Exploring labels                 |
+| `src/content/philosophy.ts` | The five Engineering Philosophy principles                                                 |
+| `src/content/timeline.ts`   | Career Direction stages and Engineering Lab area cards                                     |
+
+Colors and fonts live in `src/index.css` under the `@theme` block if you
+ever want to adjust the visual system.
+
+---
+
+## 5. Add the resume
+
+The Resume section links to:
+
+```
+/public/Mugheer_Islam_Khattak_Resume.pdf
+```
+
+Drop your actual PDF at that exact path (same filename) and the
+"Download Resume" button works immediately â€” no code changes needed.
+A placeholder note (`public/README_RESUME_PLACEHOLDER.txt`) marks the
+spot; delete it once the real file is in place.
+
+---
+
+## 6. Links to double-check before deploying
+
+- **LinkedIn** â€” already set to the URL you provided:
+  `https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/`
+  Update in `src/content/profile.ts` if it ever changes.
+- **Customer360 GitHub link** â€” set to
+  `https://github.com/Mugheerik/customer360-platform` in
+  `src/content/projects.ts`. Update if the repo name/URL differs.
+- **Canonical / OG URL** â€” `index.html` and `public/sitemap.xml` currently
+  point to `https://mugheerislamkhattak.dev/` as a placeholder domain.
+  Replace with your real deployed domain once you have one.
+- Other project cards (Healthcare Analytics, Stock Market Pipeline, SaaS
+  Funnel Analytics) have no GitHub link yet since none was provided â€” add
+  one in `src/content/projects.ts` if/when a repo exists.
+
+---
+
+## 7. Deploy as a static site
+
+The production build in `dist/` is plain static HTML/CSS/JS â€” deploy it
+anywhere that serves static files:
+
+**Vercel / Netlify (recommended, zero-config)**
+
+1. Push this repo to GitHub.
+2. Import it in Vercel or Netlify.
+3. Build command: `npm run build` â€” Output directory: `dist`.
+
+**GitHub Pages**
+
+1. `npm run build`
+2. Deploy the `dist/` folder to the `gh-pages` branch (e.g. with the
+   `gh-pages` npm package, or GitHub Actions).
+
+**Any static host (S3, Cloudflare Pages, etc.)**
+Just upload the contents of `dist/` after running `npm run build`.
+
+---
+
+## 8. What's intentionally not here (by design, per V1 scope)
+
+No backend, database, authentication, CMS, admin panel, blog backend,
+contact API, AI chatbot, analytics, user accounts, Kubernetes, or
+microservices. All copy is real content you provided or clearly-marked
+placeholders â€” nothing was fabricated (no invented employers, clients,
+awards, statistics, or live URLs).

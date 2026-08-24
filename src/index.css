@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color tokens ---- */
+  --color-paper: #f6f7f5;
+  --color-paper-dim: #edeeea;
+  --color-ink: #1b1f23;
+  --color-ink-muted: #5b6470;
+  --color-ink-faint: #8a929c;
+  --color-line: #d8dce1;
+  --color-line-strong: #b9c0c8;
+
+  --color-blueprint: #2b4c7e;
+  --color-blueprint-deep: #16304f;
+  --color-blueprint-soft: #e7edf5;
+
+  --color-signal: #c97a2b;
+  --color-signal-soft: #f5e6d3;
+
+  --color-graphite: #12161c;
+  --color-graphite-line: #2a323c;
+  --color-graphite-text: #e8eaed;
+  --color-graphite-muted: #98a1ac;
+
+  /* ---- Type tokens ---- */
+  --font-display:
+    "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blueprint);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Engineering "title block" section label, like a drawing figure caption */
+  .drawing-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-blueprint);
+  }
+
+  /* Corner bracket frame, evokes a technical drawing / schematic crop mark */
+  .bracket-frame {
+    position: relative;
+  }
+  .bracket-frame::before,
+  .bracket-frame::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--color-line-strong);
+    transition: border-color 200ms ease;
+  }
+  .bracket-frame::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1.5px solid;
+    border-left: 1.5px solid;
+  }
+  .bracket-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+  }
+  .bracket-frame:hover::before,
+  .bracket-frame:hover::after {
+    border-color: var(--color-blueprint);
+  }
+
+  .status-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    border: 1px solid var(--color-line-strong);
+    color: var(--color-ink-muted);
+    white-space: nowrap;
+  }
+  .status-tag[data-tone="current"] {
+    color: var(--color-blueprint);
+    border-color: var(--color-blueprint);
+    background: var(--color-blueprint-soft);
+  }
+  .status-tag[data-tone="developing"] {
+    color: var(--color-signal);
+    border-color: var(--color-signal);
+    background: var(--color-signal-soft);
+  }
+}
