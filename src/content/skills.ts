@@ -1,24 +1,31 @@
-// Engineering Focus categories. `tone` drives the visual label:
-// "current" | "developing" | undefined (plain / working-with)
-
 export type SkillTone = "current" | "developing";
 
 export interface SkillCategory {
   id: string;
+
   figure: string;
+
   title: string;
+
   label: string;
+
   tone?: SkillTone;
+
   items: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     id: "backend",
+
     figure: "01",
+
     title: "Backend Engineering",
+
     label: "Current",
+
     tone: "current",
+
     items: [
       "Python",
       "FastAPI",
@@ -26,77 +33,115 @@ export const skillCategories: SkillCategory[] = [
       "PostgreSQL",
       "SQLAlchemy",
       "Alembic",
+      "Pydantic",
+      "Authentication",
+      "Authorization",
       "Clean Architecture",
       "Repository Pattern",
       "Service Layer",
       "Dependency Injection",
+      "Transaction Management",
       "Automated Testing",
     ],
   },
+
   {
     id: "data",
+
     figure: "02",
+
     title: "Data & Analytics",
+
     label: "Current",
+
     tone: "current",
+
     items: [
       "SQL",
       "PostgreSQL",
+      "Python",
       "dbt",
       "Data Modeling",
       "ETL / ELT",
       "Analytics Engineering",
       "Power BI",
       "DAX",
-      "Data Quality",
+      "Data Transformation",
+      "KPI Reporting",
     ],
   },
+
   {
-    id: "devops",
+    id: "engineering",
+
     figure: "03",
-    title: "Engineering & DevOps",
+
+    title: "Engineering Practices",
+
     label: "Working With",
+
     items: [
       "Git",
       "GitHub",
       "Docker",
       "GitHub Actions",
       "CI/CD",
-      "Linux",
-      "Ruff",
       "Pytest",
+      "Ruff",
       "Pre-commit",
+      "Dependency Auditing",
+      "Semantic Versioning",
+      "Linux",
     ],
   },
+
   {
-    id: "cloud",
+    id: "frontend",
+
     figure: "04",
-    title: "Cloud & Platform",
-    label: "Developing",
-    tone: "developing",
+
+    title: "Frontend & Applications",
+
+    label: "Current",
+
+    tone: "current",
+
     items: [
-      "AWS",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "React Native",
+      "Expo",
+      "Vite",
+      "TanStack Query",
+      "Zustand",
+      "Tailwind CSS",
+    ],
+  },
+
+  {
+    id: "future",
+
+    figure: "05",
+
+    title: "Cloud & Intelligent Systems",
+
+    label: "Developing",
+
+    tone: "developing",
+
+    items: [
       "Cloud Architecture",
+      "AWS",
       "Infrastructure as Code",
-      "Cloud-Native Engineering",
       "Platform Engineering",
       "Distributed Systems",
-    ],
-  },
-  {
-    id: "intelligent-systems",
-    figure: "05",
-    title: "Systems & Intelligent Systems",
-    label: "Exploring",
-    tone: "developing",
-    items: [
-      "Go",
       "Event-Driven Architecture",
       "Workflow Systems",
       "Automation",
       "AI Integration",
-      "Intelligent Systems",
       "System Design",
+      "Intelligent Systems",
     ],
   },
 ];

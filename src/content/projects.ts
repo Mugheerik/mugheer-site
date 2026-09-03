@@ -1,101 +1,163 @@
 export interface Project {
   id: string;
+
   name: string;
+
   tagline: string;
+
   description: string;
+
   tech: string[];
+
   status?: string;
+
   github?: string;
+
   demo?: string;
 }
 
 export const flagshipProject: Project = {
   id: "customer360",
+
   name: "Customer360",
+
   tagline:
-    "Flagship Engineering Project — Enterprise Platform Engineering Laboratory",
+    "Production-Oriented Customer Management Platform & Engineering Laboratory",
+
   description:
-    "Customer360 is a long-term platform engineering laboratory exploring how enterprise customer systems can be designed, tested, deployed, and evolved across backend engineering, data platforms, cloud infrastructure, automation, and intelligent systems.",
+    "A full-stack customer management platform built to demonstrate backend engineering, software architecture, PostgreSQL database engineering, authentication, authorization, automated testing, CI/CD, and modern web application development.",
+
   tech: [
     "Python",
     "FastAPI",
     "PostgreSQL",
     "SQLAlchemy",
     "Alembic",
+    "React",
+    "TypeScript",
     "Docker",
     "Pytest",
     "GitHub Actions",
-    "React",
-    "TypeScript",
   ],
-  status: "In Active Development",
+
+  status: "Active Engineering Project",
+
   github: "https://github.com/Mugheerik/customer360-platform",
 };
 
 export const otherProjects: Project[] = [
   {
     id: "healthcare-analytics",
+
     name: "Healthcare Analytics Dashboard",
+
     tagline: "Analytics Engineering",
+
     description:
-      "Analytics solution transforming healthcare datasets into structured analytical models and KPI reporting.",
-    tech: ["Python", "PostgreSQL", "dbt", "Power BI"],
+      "End-to-end healthcare analytics project using Python, PostgreSQL, dbt, and Power BI to transform healthcare data into structured analytical models and operational KPI reporting.",
+
+    tech: [
+      "Python",
+      "PostgreSQL",
+      "SQL",
+      "dbt",
+      "Power BI",
+      "DAX",
+    ],
   },
+
   {
     id: "stock-market-pipeline",
+
     name: "Stock Market Analytics Pipeline",
-    tagline: "Data Pipeline",
+
+    tagline: "Data Pipeline & Analytics",
+
     description:
-      "Analytics pipeline for extracting, transforming, modeling, and visualizing financial data.",
-    tech: ["Python", "SQL", "PostgreSQL", "dbt", "Power BI"],
+      "Analytics workflow covering data preparation, transformation, modeling, and visualization to analyze stock market trends and performance metrics.",
+
+    tech: [
+      "Python",
+      "SQL",
+      "PostgreSQL",
+      "dbt",
+      "Power BI",
+    ],
   },
+
   {
     id: "saas-funnel-analytics",
+
     name: "SaaS Funnel & Revenue Analytics",
+
     tagline: "Analytics Engineering",
+
     description:
-      "Analytics project focused on customer lifecycle, funnel, and revenue analysis.",
-    tech: ["SQL", "dbt", "Power BI"],
+      "Analytics project focused on customer lifecycle, conversion funnels, revenue performance, and business KPIs including MRR, churn, and ARPU.",
+
+    tech: [
+      "Python",
+      "SQL",
+      "PostgreSQL",
+      "dbt",
+      "Power BI",
+    ],
   },
+
   {
-    id: "newsbroadcast",
-    name: "NewsBroadcast",
-    tagline: "Mobile Application",
+    id: "news-broadcast",
+
+    name: "News Broadcast Updates",
+
+    tagline: "Final Year Mobile Application",
+
     description:
-      "Cross-platform mobile application developed as a final-year software engineering project.",
-    tech: ["React Native", "Expo", "Firebase"],
+      "A community-driven hyper-local news platform developed as a BS Software Engineering final-year project, featuring location-based news, content moderation, real-time updates, Firebase services, and AI-assisted video summarization.",
+
+    tech: [
+      "React Native",
+      "Expo",
+      "JavaScript",
+      "Firebase",
+      "Python",
+      "Flask",
+    ],
   },
 ];
 
 export const architectureLayers = [
-  "Frontend",
-  "FastAPI API",
+  "React Web Application",
+  "FastAPI API Layer",
+  "Authentication & Authorization",
   "Application / Service Layer",
-  "Domain",
   "Repository / Data Access",
-  "PostgreSQL",
+  "SQLAlchemy ORM",
+  "PostgreSQL Database",
 ];
 
 export const engineeringPractices = [
-  "Clean Architecture",
   "Modular Monolith",
+  "Clean Architecture Principles",
   "Repository Pattern",
   "Service Layer",
   "Dependency Injection",
   "JWT Authentication",
-  "Authorization",
-  "PostgreSQL",
-  "Alembic",
+  "Role-Based Authorization",
+  "Transaction Boundaries",
+  "Database Migrations",
   "Automated Testing",
   "CI/CD",
-  "Docker",
+  "Docker Development Environment",
 ];
 
 export const futureDirection = [
-  "Platform Services",
-  "Workflow Automation",
-  "Event-Driven Architecture",
-  "Cloud Infrastructure",
-  "Analytics",
-  "AI-Assisted Business Systems",
+  "Background Processing",
+  "Scheduled Jobs",
+  "Notifications",
+  "External Integrations",
+  "Cloud Deployment",
+  "Event-Driven Processing",
+  "Messaging Infrastructure",
+  "Operational Analytics",
+  "AI-Assisted Workflows",
 ];

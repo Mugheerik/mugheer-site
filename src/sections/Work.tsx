@@ -1,101 +1,124 @@
 import SectionHeading from "../components/SectionHeading";
-import { flagshipProject, otherProjects } from "../content/projects";
+
+import {
+  flagshipProject,
+  otherProjects,
+} from "../content/projects";
 
 export default function Work() {
   return (
-    <section id="work" className="mx-auto max-w-6xl px-6 py-24 md:px-10">
+    <section
+      id="work"
+      className="mx-auto max-w-6xl px-6 py-20 sm:py-24 md:px-10"
+    >
       <SectionHeading
         figure="03"
-        title="Work"
+        title="Selected Work"
         eyebrow="Projects"
-        description="Selected engineering work, ordered by relevance to the platform-engineering direction this site describes."
+        description="A selection of software engineering, backend, analytics, and application development projects demonstrating practical technical experience."
       />
 
       <a
         href="#customer360"
-        className="bracket-frame group mt-14 block border border-line-strong bg-graphite p-8 text-graphite-text transition-colors md:p-12"
+        className="bracket-frame group mt-12 block border border-line-strong bg-graphite p-6 text-graphite-text transition-all hover:border-blueprint sm:p-8 md:mt-14 md:p-12"
       >
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <span className="drawing-label text-blueprint">Flagship Project</span>
-          <span className="status-tag border-blueprint text-blueprint">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <span className="drawing-label text-blueprint">
+            Flagship Engineering Project
+          </span>
+
+          <span className="status-tag w-fit border-blueprint text-blueprint">
             {flagshipProject.status}
           </span>
         </div>
 
-        <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
           {flagshipProject.name}
         </h3>
-        <p className="mt-2 font-mono text-sm text-graphite-muted">
+
+        <p className="mt-3 font-mono text-xs leading-relaxed text-graphite-muted sm:text-sm">
           {flagshipProject.tagline}
         </p>
 
-        <p className="mt-6 max-w-2xl leading-relaxed text-graphite-muted">
+        <p className="mt-6 max-w-3xl leading-relaxed text-graphite-muted">
           {flagshipProject.description}
         </p>
 
-        <ul className="mt-6 flex flex-wrap gap-2">
+        <ul className="mt-7 flex flex-wrap gap-2">
           {flagshipProject.tech.map((tech) => (
             <li
               key={tech}
-              className="border border-graphite-line px-2.5 py-1 font-mono text-xs text-graphite-muted"
+              className="border border-graphite-line px-2.5 py-1 font-mono text-[0.7rem] text-graphite-muted sm:text-xs"
             >
               {tech}
             </li>
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-blueprint underline-offset-4 group-hover:underline">
-            Read the case study ↓
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-blueprint group-hover:underline">
+            Read Case Study →
           </span>
+
           <a
             href={flagshipProject.github}
             target="_blank"
             rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="border border-graphite-line px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-graphite-text transition-colors hover:border-blueprint hover:text-blueprint"
+            onClick={(event) => event.stopPropagation()}
+            className="inline-flex w-fit items-center border border-graphite-line px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-graphite-text transition-colors hover:border-blueprint hover:text-blueprint"
           >
-            GitHub
+            View GitHub
           </a>
         </div>
       </a>
 
       <div className="mt-16">
-        <p className="drawing-label">Other Projects</p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+        <div className="flex items-center gap-4">
+          <p className="drawing-label">Other Projects</p>
+
+          <div className="h-px flex-1 bg-line" />
+        </div>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
           {otherProjects.map((project) => (
-            <div
+            <article
               key={project.id}
-              className="bracket-frame border border-line-strong p-6"
+              className="bracket-frame flex h-full flex-col border border-line-strong bg-paper p-6 transition-colors hover:border-blueprint sm:p-7"
             >
-              <p className="drawing-label">{project.tagline}</p>
-              <h4 className="mt-3 font-display text-lg font-semibold text-ink">
+              <p className="drawing-label text-blueprint">
+                {project.tagline}
+              </p>
+
+              <h4 className="mt-4 font-display text-xl font-semibold text-ink sm:text-2xl">
                 {project.name}
               </h4>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-muted">
                 {project.description}
               </p>
-              <ul className="mt-4 flex flex-wrap gap-2">
+
+              <ul className="mt-6 flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <li
                     key={tech}
-                    className="border border-line-strong px-2 py-0.5 font-mono text-[0.7rem] text-ink-muted"
+                    className="border border-line-strong px-2 py-1 font-mono text-[0.68rem] text-ink-muted"
                   >
                     {tech}
                   </li>
                 ))}
               </ul>
+
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-5 inline-block font-mono text-xs uppercase tracking-[0.1em] text-blueprint hover:underline"
+                  className="mt-6 inline-block font-mono text-xs uppercase tracking-[0.1em] text-blueprint hover:underline"
                 >
-                  GitHub ↗
+                  View Project →
                 </a>
               )}
-            </div>
+            </article>
           ))}
         </div>
       </div>

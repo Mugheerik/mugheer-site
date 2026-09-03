@@ -1,31 +1,50 @@
-// Edit this file to update personal details, hero copy, and contact links.
-
 export const profile = {
   name: "Mugheer Islam Khattak",
-  role: "Software Engineer building toward Platform & Intelligent Systems Engineering",
+
+  role: "Backend-Focused Software Engineer",
+
   location: "Abbottabad, Pakistan",
+
   email: "Mugheer.ik@gmail.com",
+
   github: "https://github.com/Mugheerik",
-  linkedin: "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
+
+  linkedin:
+    "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
+
   resumePath: "/Mugheer_Islam_Khattak_Resume.pdf",
 };
 
 export const hero = {
   supportingText:
-    "I build backend and data systems with Python, SQL, PostgreSQL, FastAPI, and modern engineering practices, while developing toward cloud infrastructure, distributed systems, data platforms, and intelligent systems.",
-  primaryCta: { label: "View Customer360", href: "#customer360" },
+    "Software Engineering graduate focused on backend systems, APIs, databases, automation, and production-oriented engineering. I build with Python, FastAPI, PostgreSQL, SQL, and modern software engineering practices while developing toward cloud, distributed, and intelligent systems.",
+
+  primaryCta: {
+    label: "Explore Customer360",
+    href: "#customer360",
+  },
+
   secondaryCtas: [
-    { label: "GitHub", href: "https://github.com/Mugheerik" },
-    { label: "Resume", href: "/Mugheer_Islam_Khattak_Resume.pdf" },
+    {
+      label: "GitHub",
+      href: "https://github.com/Mugheerik",
+    },
+    {
+      label: "Resume",
+      href: "/Mugheer_Islam_Khattak_Resume.pdf",
+    },
   ],
 };
 
 export const about = {
   paragraphs: [
-    "Mugheer Islam Khattak is a Software Engineering graduate focused on backend engineering, data systems, and platform engineering.",
-    "He has worked across backend development, analytics engineering, business intelligence, and software engineering practices.",
-    "His current engineering focus includes Python, FastAPI, PostgreSQL, SQL, Docker, CI/CD, data systems, and cloud fundamentals.",
-    "He is building toward platform engineering and eventually intelligent systems architecture, with particular interest in distributed systems, cloud infrastructure, automation, AI-enabled systems, and large-scale software architecture.",
+    "Mugheer Islam Khattak is a Software Engineering graduate focused on backend engineering, production-oriented systems, and data-driven software.",
+
+    "His work combines backend API development, PostgreSQL database engineering, automated testing, CI/CD, containerized development environments, analytics engineering, and business intelligence.",
+
+    "His current technical focus includes Python, FastAPI, PostgreSQL, SQLAlchemy, SQL, Docker, automated testing, CI/CD, and maintainable software architecture.",
+
+    "Long term, he is developing toward cloud platforms, distributed systems, event-driven architectures, AI-enabled applications, and intelligent systems architecture.",
   ],
 };
 
