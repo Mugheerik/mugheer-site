@@ -4,12 +4,30 @@ export interface TimelineStage {
 }
 
 export const careerStages: TimelineStage[] = [
-  { label: "Software Engineering", status: "current" },
-  { label: "Backend Engineering", status: "current" },
-  { label: "Data & Analytics Engineering", status: "current" },
-  { label: "Platform Engineering", status: "developing" },
-  { label: "Cloud & Distributed Systems", status: "developing" },
-  { label: "Intelligent Systems Engineering", status: "direction" },
+  {
+    label: "Software Engineering",
+    status: "current",
+  },
+  {
+    label: "Backend & Full-Stack Engineering",
+    status: "current",
+  },
+  {
+    label: "Cloud & Production Engineering",
+    status: "developing",
+  },
+  {
+    label: "Distributed Systems",
+    status: "developing",
+  },
+  {
+    label: "AI Systems Engineering",
+    status: "direction",
+  },
+  {
+    label: "Intelligent Systems Architecture",
+    status: "direction",
+  },
 ];
 
 export interface LabArea {

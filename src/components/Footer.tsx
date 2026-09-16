@@ -8,9 +8,10 @@ export default function Footer() {
           <div>
             <p className="font-display text-lg font-semibold">{profile.name}</p>
             <p className="mt-2 max-w-sm text-sm text-graphite-muted">
-              Software Engineer building toward Platform &amp; Intelligent
-              Systems Engineering
-            </p>
+  Software Engineer focused on Backend &amp; Full-Stack Systems,
+  developing toward Cloud, Distributed, and Intelligent Systems
+  Engineering
+</p>
           </div>
 
           <ul className="flex gap-6 font-mono text-xs uppercase tracking-[0.12em] text-graphite-muted">

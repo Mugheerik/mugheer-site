@@ -7,7 +7,7 @@ export default function EngineeringLab() {
       <SectionHeading
         figure="07"
         title="Engineering Lab"
-        description="This is where I document experiments, architecture explorations, system designs, cloud experiments, and engineering lessons learned while developing toward platform and intelligent systems engineering. This section will grow over time."
+        description="A space for documenting architecture experiments, system designs, cloud and production engineering work, distributed systems explorations, and applied AI integration as the engineering journey progresses."
       />
 
       <div className="mt-14 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +20,7 @@ export default function EngineeringLab() {
               {area.description}
             </p>
             <span className="drawing-label mt-4 text-ink-faint">
-              Coming Soon
+              Developing
             </span>
           </div>
         ))}

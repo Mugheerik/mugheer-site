@@ -5,7 +5,6 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import EngineeringFocus from "./sections/EngineeringFocus";
 import Work from "./sections/Work";
-import Customer360CaseStudy from "./sections/Customer360CaseStudy";
 import Philosophy from "./sections/Philosophy";
 import CareerDirection from "./sections/CareerDirection";
 import EngineeringLab from "./sections/EngineeringLab";
@@ -29,7 +28,6 @@ function App() {
         <About />
         <EngineeringFocus />
         <Work />
-        <Customer360CaseStudy />
         <Philosophy />
         <CareerDirection />
         <EngineeringLab />

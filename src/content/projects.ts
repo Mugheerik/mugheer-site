@@ -17,15 +17,15 @@ export interface Project {
 }
 
 export const flagshipProject: Project = {
-  id: "customer360",
+  id: "teamflow",
 
-  name: "Customer360",
+  name: "TeamFlow",
 
   tagline:
-    "Production-Oriented Customer Management Platform & Engineering Laboratory",
+    "Multi-Tenant Project Management API & Backend Engineering System",
 
   description:
-    "A full-stack customer management platform built to demonstrate backend engineering, software architecture, PostgreSQL database engineering, authentication, authorization, automated testing, CI/CD, and modern web application development.",
+    "A production-oriented backend system built to demonstrate API design, authentication, authorization, PostgreSQL database engineering, migrations, automated testing, Docker-based development, and CI/CD.",
 
   tech: [
     "Python",
@@ -33,19 +33,60 @@ export const flagshipProject: Project = {
     "PostgreSQL",
     "SQLAlchemy",
     "Alembic",
-    "React",
-    "TypeScript",
-    "Docker",
+    "JWT",
     "Pytest",
+    "Docker",
     "GitHub Actions",
   ],
 
-  status: "Active Engineering Project",
+  status: "Current Engineering Project",
 
-  github: "https://github.com/Mugheerik/customer360-platform",
+  github: "https://github.com/Mugheerik/TeamFlow",
 };
 
 export const otherProjects: Project[] = [
+  {
+    id: "reliable-notes-api",
+
+    name: "Reliable Notes API",
+
+    tagline: "Backend API Engineering",
+
+    description:
+      "A focused backend API project built to practice reliable REST API design, PostgreSQL persistence, validation, testing, and maintainable Python backend architecture.",
+
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pytest",
+    ],
+
+    github: "https://github.com/Mugheerik",
+  },
+
+  {
+    id: "linkvault",
+
+    name: "LinkVault",
+
+    tagline: "Backend Application",
+
+    description:
+      "A backend-focused application built around persistent data, API design, validation, and practical software engineering patterns.",
+
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pytest",
+    ],
+
+    github: "https://github.com/Mugheerik",
+  },
+
   {
     id: "healthcare-analytics",
 
@@ -123,41 +164,4 @@ export const otherProjects: Project[] = [
       "Flask",
     ],
   },
-];
-
-export const architectureLayers = [
-  "React Web Application",
-  "FastAPI API Layer",
-  "Authentication & Authorization",
-  "Application / Service Layer",
-  "Repository / Data Access",
-  "SQLAlchemy ORM",
-  "PostgreSQL Database",
-];
-
-export const engineeringPractices = [
-  "Modular Monolith",
-  "Clean Architecture Principles",
-  "Repository Pattern",
-  "Service Layer",
-  "Dependency Injection",
-  "JWT Authentication",
-  "Role-Based Authorization",
-  "Transaction Boundaries",
-  "Database Migrations",
-  "Automated Testing",
-  "CI/CD",
-  "Docker Development Environment",
-];
-
-export const futureDirection = [
-  "Background Processing",
-  "Scheduled Jobs",
-  "Notifications",
-  "External Integrations",
-  "Cloud Deployment",
-  "Event-Driven Processing",
-  "Messaging Infrastructure",
-  "Operational Analytics",
-  "AI-Assisted Workflows",
 ];

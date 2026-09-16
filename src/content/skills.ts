@@ -46,28 +46,24 @@ export const skillCategories: SkillCategory[] = [
   },
 
   {
-    id: "data",
+    id: "frontend",
 
     figure: "02",
 
-    title: "Data & Analytics",
+    title: "Frontend & Full-Stack",
 
-    label: "Current",
-
-    tone: "current",
+    label: "Working With",
 
     items: [
-      "SQL",
-      "PostgreSQL",
-      "Python",
-      "dbt",
-      "Data Modeling",
-      "ETL / ELT",
-      "Analytics Engineering",
-      "Power BI",
-      "DAX",
-      "Data Transformation",
-      "KPI Reporting",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Vite",
+      "TanStack Query",
+      "Zustand",
+      "Tailwind CSS",
+      "React Native",
+      "Expo",
     ],
   },
 
@@ -76,7 +72,7 @@ export const skillCategories: SkillCategory[] = [
 
     figure: "03",
 
-    title: "Engineering Practices",
+    title: "Engineering & DevOps",
 
     label: "Working With",
 
@@ -96,35 +92,35 @@ export const skillCategories: SkillCategory[] = [
   },
 
   {
-    id: "frontend",
+    id: "data",
 
     figure: "04",
 
-    title: "Frontend & Applications",
+    title: "Data & Analytics",
 
-    label: "Current",
-
-    tone: "current",
+    label: "Supporting",
 
     items: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "React Native",
-      "Expo",
-      "Vite",
-      "TanStack Query",
-      "Zustand",
-      "Tailwind CSS",
+      "SQL",
+      "PostgreSQL",
+      "Python",
+      "dbt",
+      "Data Modeling",
+      "ETL / ELT",
+      "Analytics Engineering",
+      "Power BI",
+      "DAX",
+      "Data Transformation",
+      "KPI Reporting",
     ],
   },
 
   {
-    id: "future",
+    id: "cloud",
 
     figure: "05",
 
-    title: "Cloud & Intelligent Systems",
+    title: "Cloud & Production",
 
     label: "Developing",
 
@@ -135,12 +131,31 @@ export const skillCategories: SkillCategory[] = [
       "AWS",
       "Infrastructure as Code",
       "Platform Engineering",
+      "Deployment",
+      "Observability",
+      "Production Systems",
+      "System Design",
+    ],
+  },
+
+  {
+    id: "intelligent",
+
+    figure: "06",
+
+    title: "Distributed & Intelligent Systems",
+
+    label: "Long-Term",
+
+    tone: "developing",
+
+    items: [
       "Distributed Systems",
       "Event-Driven Architecture",
+      "Messaging",
       "Workflow Systems",
       "Automation",
       "AI Integration",
-      "System Design",
       "Intelligent Systems",
     ],
   },

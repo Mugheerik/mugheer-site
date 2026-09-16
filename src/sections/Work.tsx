@@ -15,13 +15,10 @@ export default function Work() {
         figure="03"
         title="Selected Work"
         eyebrow="Projects"
-        description="A selection of software engineering, backend, analytics, and application development projects demonstrating practical technical experience."
+        description="A selection of backend, full-stack, and data-focused projects demonstrating practical software engineering experience."
       />
 
-      <a
-        href="#customer360"
-        className="bracket-frame group mt-12 block border border-line-strong bg-graphite p-6 text-graphite-text transition-all hover:border-blueprint sm:p-8 md:mt-14 md:p-12"
-      >
+      <div className="bracket-frame mt-12 block border border-line-strong bg-graphite p-6 text-graphite-text sm:p-8 md:mt-14 md:p-12">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <span className="drawing-label text-blueprint">
             Flagship Engineering Project
@@ -55,22 +52,19 @@ export default function Work() {
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-blueprint group-hover:underline">
-            Read Case Study →
-          </span>
-
-          <a
-            href={flagshipProject.github}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
-            className="inline-flex w-fit items-center border border-graphite-line px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-graphite-text transition-colors hover:border-blueprint hover:text-blueprint"
-          >
-            View GitHub
-          </a>
+        <div className="mt-8">
+          {flagshipProject.github && (
+            <a
+              href={flagshipProject.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit items-center border border-blueprint px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-graphite-text transition-colors hover:bg-blueprint hover:text-graphite"
+            >
+              View TeamFlow on GitHub →
+            </a>
+          )}
         </div>
-      </a>
+      </div>
 
       <div className="mt-16">
         <div className="flex items-center gap-4">

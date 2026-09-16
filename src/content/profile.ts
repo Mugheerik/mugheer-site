@@ -1,7 +1,7 @@
 export const profile = {
   name: "Mugheer Islam Khattak",
 
-  role: "Backend-Focused Software Engineer",
+  role: "Software Engineer | Backend & Full-Stack Systems",
 
   location: "Abbottabad, Pakistan",
 
@@ -17,11 +17,11 @@ export const profile = {
 
 export const hero = {
   supportingText:
-    "Software Engineering graduate focused on backend systems, APIs, databases, automation, and production-oriented engineering. I build with Python, FastAPI, PostgreSQL, SQL, and modern software engineering practices while developing toward cloud, distributed, and intelligent systems.",
+    "Software Engineering graduate focused on building reliable backend and full-stack systems with Python, TypeScript, FastAPI, React, PostgreSQL, and modern engineering practices. Developing toward cloud, distributed, and intelligent systems.",
 
   primaryCta: {
-    label: "Explore Customer360",
-    href: "#customer360",
+    label: "Explore TeamFlow",
+    href: "#work",
   },
 
   secondaryCtas: [
@@ -38,13 +38,13 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    "Mugheer Islam Khattak is a Software Engineering graduate focused on backend engineering, production-oriented systems, and data-driven software.",
+    "Mugheer Islam Khattak is a Software Engineering graduate focused on backend and full-stack software development, with an emphasis on reliable APIs, databases, application architecture, and production-oriented engineering.",
 
-    "His work combines backend API development, PostgreSQL database engineering, automated testing, CI/CD, containerized development environments, analytics engineering, and business intelligence.",
+    "His work combines Python backend development, FastAPI, PostgreSQL, React, TypeScript, automated testing, Docker, CI/CD, and practical software engineering practices.",
 
-    "His current technical focus includes Python, FastAPI, PostgreSQL, SQLAlchemy, SQL, Docker, automated testing, CI/CD, and maintainable software architecture.",
+    "He also brings experience with SQL, dbt, data modeling, analytics engineering, and Power BI, providing a strong data foundation that complements his software engineering work.",
 
-    "Long term, he is developing toward cloud platforms, distributed systems, event-driven architectures, AI-enabled applications, and intelligent systems architecture.",
+    "Long term, he is developing toward cloud and production engineering, distributed systems, AI systems engineering, and ultimately intelligent systems architecture.",
   ],
 };
 
