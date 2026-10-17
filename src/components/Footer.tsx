@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
             <p className="font-display text-lg font-semibold">{profile.name}</p>
-            <p className="mt-2 max-w-sm text-sm text-graphite-muted">
-  Software Engineer focused on Backend &amp; Full-Stack Systems,
-  developing toward Cloud, Distributed, and Intelligent Systems
-  Engineering
-</p>
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-graphite-muted">
+              Current focus: Backend &amp; Full-Stack Software Engineering.
+              Long-term direction: Cloud &amp; Distributed Systems, progressing
+              toward Cloud &amp; AI Infrastructure Architecture.
+            </p>
           </div>
 
           <ul className="flex gap-6 font-mono text-xs uppercase tracking-[0.12em] text-graphite-muted">
