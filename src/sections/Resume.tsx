@@ -13,11 +13,7 @@ export default function Resume() {
               Mugheer_Islam_Khattak_Resume.pdf
             </p>
             <p className="mt-1 text-sm text-ink-muted">
-              Place the file at{" "}
-              <code className="font-mono text-xs text-blueprint">
-                /public{profile.resumePath}
-              </code>{" "}
-              to enable this link.
+              Backend-focused software engineering resume.
             </p>
           </div>
           <a
