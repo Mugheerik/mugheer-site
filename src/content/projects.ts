@@ -1,167 +1,152 @@
 export interface Project {
   id: string;
-
   name: string;
-
   tagline: string;
-
   description: string;
-
   tech: string[];
-
-  status?: string;
-
+  highlights: string[];
+  note?: string;
   github?: string;
-
-  demo?: string;
 }
 
-export const flagshipProject: Project = {
-  id: "teamflow",
-
-  name: "TeamFlow",
-
-  tagline:
-    "Multi-Tenant Project Management API & Backend Engineering System",
-
-  description:
-    "A production-oriented backend system built to demonstrate API design, authentication, authorization, PostgreSQL database engineering, migrations, automated testing, Docker-based development, and CI/CD.",
-
-  tech: [
-    "Python",
-    "FastAPI",
-    "PostgreSQL",
-    "SQLAlchemy",
-    "Alembic",
-    "JWT",
-    "Pytest",
-    "Docker",
-    "GitHub Actions",
-  ],
-
-  status: "Current Engineering Project",
-
-  github: "https://github.com/Mugheerik/TeamFlow",
-};
-
-export const otherProjects: Project[] = [
-  {
-    id: "reliable-notes-api",
-
-    name: "Reliable Notes API",
-
-    tagline: "Backend API Engineering",
-
-    description:
-      "A focused backend API project built to practice reliable REST API design, PostgreSQL persistence, validation, testing, and maintainable Python backend architecture.",
-
-    tech: [
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "Pytest",
-    ],
-
-    github: "https://github.com/Mugheerik",
-  },
-
+export const featuredProjects: Project[] = [
   {
     id: "linkvault",
-
     name: "LinkVault",
-
-    tagline: "Backend Application",
-
+    tagline: "URL Shortening & Analytics API",
     description:
-      "A backend-focused application built around persistent data, API design, validation, and practical software engineering patterns.",
-
+      "A FastAPI service for authenticated URL management and public redirects, using PostgreSQL as the source of truth and Redis for caching and rate limiting.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "GitHub Actions",
+    ],
+    highlights: [
+      "JWT-authenticated URL management and click analytics",
+      "Redis redirect caching with PostgreSQL fallback when Redis is unavailable",
+      "Redis-backed rate limiting, automated tests, and CI",
+      "Local benchmark: cached redirects averaged 6.62 ms vs 9.04 ms for PostgreSQL-backed redirects (100 requests; not a production load test)",
+    ],
+    github: "https://github.com/Mugheerik/LinkVault",
+  },
+  {
+    id: "teamflow",
+    name: "TeamFlow",
+    tagline: "Multi-Tenant Task Management API",
+    description:
+      "A modular FastAPI backend for organizations, memberships, projects, and tasks, built around explicit tenant boundaries and server-side authorization.",
     tech: [
       "Python",
       "FastAPI",
       "PostgreSQL",
       "SQLAlchemy",
-      "Pytest",
+      "Docker",
+      "GitHub Actions",
     ],
-
-    github: "https://github.com/Mugheerik",
+    highlights: [
+      "Organization memberships with OWNER, ADMIN, and MEMBER roles",
+      "Server-side RBAC and organization-scoped resource access",
+      "PostgreSQL persistence, Alembic migrations, and schema integrity",
+      "Automated authentication, authorization, and cross-tenant access tests",
+    ],
+    github: "https://github.com/Mugheerik/TeamFlow",
   },
+  {
+    id: "doc-service",
+    name: "Doc Service",
+    tagline: "AI Document Processing Application",
+    description:
+      "A full-stack application for uploading documents, tracking processing, and reviewing Gemini-generated analysis through a web interface.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Gemini API",
+      "Docker Compose",
+      "GitHub Actions",
+    ],
+    highlights: [
+      "Authenticated PDF, DOCX, and TXT uploads with per-user document ownership",
+      "Asynchronous processing with persisted status and analysis results",
+      "Gemini-powered document analysis with error status handling",
+      "Frontend/backend integration, health checks, automated backend tests, and CI",
+    ],
+    note: "Runs locally; not publicly deployed. AI analysis requires a valid Gemini API key and available model quota.",
+    github: "https://github.com/Mugheerik/doc-service",
+  },
+];
 
+export const secondaryProjects: Project[] = [
+  {
+    id: "cv-intelligence",
+    name: "CV Intelligence",
+    tagline: "AI-Powered CV Analysis",
+    description:
+      "A containerized full-stack application for CV uploads, text extraction, Gemini-powered feedback, analysis history, and document management.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Gemini API",
+      "Docker",
+    ],
+    highlights: [
+      "Authenticated document workflows and persisted analysis history",
+      "PostgreSQL, migrations, backend tests, and GitHub Actions CI",
+    ],
+    github: "https://github.com/Mugheerik/CV-Intelligence",
+  },
+  {
+    id: "reliable-notes-api",
+    name: "Reliable Notes API",
+    tagline: "Backend REST API",
+    description:
+      "A focused Python API project covering REST endpoints, PostgreSQL persistence, validation, and automated testing.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pytest"],
+    highlights: ["Authenticated API workflows, persistence, and automated tests"],
+    github: "https://github.com/Mugheerik/reliable-notes-api",
+  },
   {
     id: "healthcare-analytics",
-
     name: "Healthcare Analytics Dashboard",
-
-    tagline: "Analytics Engineering",
-
+    tagline: "Data & Analytics",
     description:
-      "End-to-end healthcare analytics project using Python, PostgreSQL, dbt, and Power BI to transform healthcare data into structured analytical models and operational KPI reporting.",
-
-    tech: [
-      "Python",
-      "PostgreSQL",
-      "SQL",
-      "dbt",
-      "Power BI",
-      "DAX",
-    ],
+      "An analytics project using Python, PostgreSQL, dbt, and Power BI to transform healthcare data into analytical models and KPI reporting.",
+    tech: ["Python", "PostgreSQL", "SQL", "dbt", "Power BI", "DAX"],
+    highlights: [],
   },
-
   {
     id: "stock-market-pipeline",
-
     name: "Stock Market Analytics Pipeline",
-
     tagline: "Data Pipeline & Analytics",
-
     description:
-      "Analytics workflow covering data preparation, transformation, modeling, and visualization to analyze stock market trends and performance metrics.",
-
-    tech: [
-      "Python",
-      "SQL",
-      "PostgreSQL",
-      "dbt",
-      "Power BI",
-    ],
+      "A workflow for preparing, transforming, modeling, and visualizing stock market data.",
+    tech: ["Python", "SQL", "PostgreSQL", "dbt", "Power BI"],
+    highlights: [],
   },
-
   {
     id: "saas-funnel-analytics",
-
     name: "SaaS Funnel & Revenue Analytics",
-
     tagline: "Analytics Engineering",
-
     description:
-      "Analytics project focused on customer lifecycle, conversion funnels, revenue performance, and business KPIs including MRR, churn, and ARPU.",
-
-    tech: [
-      "Python",
-      "SQL",
-      "PostgreSQL",
-      "dbt",
-      "Power BI",
-    ],
+      "An analytics project exploring conversion funnels, customer lifecycle, MRR, churn, ARPU, and business KPIs.",
+    tech: ["Python", "SQL", "PostgreSQL", "dbt", "Power BI"],
+    highlights: [],
   },
-
   {
     id: "news-broadcast",
-
     name: "News Broadcast Updates",
-
-    tagline: "Final Year Mobile Application",
-
+    tagline: "Final-Year Mobile Application",
     description:
-      "A community-driven hyper-local news platform developed as a BS Software Engineering final-year project, featuring location-based news, content moderation, real-time updates, Firebase services, and AI-assisted video summarization.",
-
-    tech: [
-      "React Native",
-      "Expo",
-      "JavaScript",
-      "Firebase",
-      "Python",
-      "Flask",
-    ],
+      "A university final-year project for hyper-local news, content moderation, real-time updates, Firebase services, and AI-assisted video summarization.",
+    tech: ["React Native", "Expo", "JavaScript", "Firebase", "Python", "Flask"],
+    highlights: [],
   },
 ];
