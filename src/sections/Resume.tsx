@@ -4,20 +4,20 @@ import { profile } from "../content/profile";
 export default function Resume() {
   return (
     <section id="resume" className="border-t border-line bg-paper-dim">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:px-10">
-        <SectionHeading figure="08" title="Resume" />
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+        <SectionHeading
+          figure="07"
+          title="Resume"
+          description="Download my resume for a concise overview of my education, technical skills, and engineering projects."
+        />
 
-        <div className="mt-10 flex flex-col items-start gap-6 border border-line-strong bg-paper p-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col items-start gap-6 border border-line-strong bg-paper p-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-display text-lg font-semibold text-ink">
               Mugheer_Islam_Khattak_Resume.pdf
             </p>
             <p className="mt-1 text-sm text-ink-muted">
-              Place the file at{" "}
-              <code className="font-mono text-xs text-blueprint">
-                /public{profile.resumePath}
-              </code>{" "}
-              to enable this link.
+              Backend &amp; full-stack software engineering focus
             </p>
           </div>
           <a
