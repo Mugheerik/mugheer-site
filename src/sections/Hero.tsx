@@ -22,7 +22,6 @@ export default function Hero() {
               stroke="#5B8AA6"
               strokeWidth="1"
             />
-
             <rect
               x="72"
               y={94 + i * 100}
@@ -31,7 +30,6 @@ export default function Hero() {
               stroke="#E8A23D"
               fill="none"
             />
-
             <rect
               x="494"
               y={94 + i * 100}
@@ -42,7 +40,6 @@ export default function Hero() {
             />
           </g>
         ))}
-
         <line
           x1="78"
           y1="100"
@@ -69,6 +66,10 @@ export default function Hero() {
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-graphite-muted sm:text-lg">
           {hero.supportingText}
+        </p>
+
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-graphite-muted sm:text-base">
+          {hero.secondaryText}
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
