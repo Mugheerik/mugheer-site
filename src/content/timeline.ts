@@ -5,59 +5,19 @@ export interface TimelineStage {
 
 export const careerStages: TimelineStage[] = [
   {
-    label: "Software Engineering",
+    label: "Backend & Full-Stack Software Engineering",
     status: "current",
   },
   {
-    label: "Backend & Full-Stack Engineering",
-    status: "current",
-  },
-  {
-    label: "Cloud & Production Engineering",
+    label: "Backend & Infrastructure Engineering",
     status: "developing",
   },
   {
-    label: "Distributed Systems",
-    status: "developing",
-  },
-  {
-    label: "AI Systems Engineering",
+    label: "Distributed Systems Engineering",
     status: "direction",
   },
   {
-    label: "Intelligent Systems Architecture",
+    label: "Cloud & AI Infrastructure Architecture",
     status: "direction",
-  },
-];
-
-export interface LabArea {
-  title: string;
-  description: string;
-}
-
-export const labAreas: LabArea[] = [
-  {
-    title: "Architecture",
-    description: "System design notes and structural trade-offs.",
-  },
-  {
-    title: "Cloud",
-    description: "Infrastructure experiments and platform fundamentals.",
-  },
-  {
-    title: "Distributed Systems",
-    description: "Consistency, coordination, and failure modes.",
-  },
-  {
-    title: "Data Engineering",
-    description: "Pipelines, modeling, and data quality practices.",
-  },
-  {
-    title: "AI Systems",
-    description: "Applied AI integration inside engineered systems.",
-  },
-  {
-    title: "Automation",
-    description: "Workflow tooling and operational automation.",
   },
 ];
