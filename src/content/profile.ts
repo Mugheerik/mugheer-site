@@ -12,7 +12,7 @@ export const hero = {
   supportingText:
     "I build backend APIs and full-stack applications using Python, FastAPI, PostgreSQL, Redis, and TypeScript, with a focus on reliable, maintainable software.",
   secondaryText:
-    "Currently focused on backend engineering, with a long-term interest in cloud infrastructure, distributed systems, and scalable backend platforms.",
+    "Seeking junior backend and associate software engineering opportunities, while developing toward cloud infrastructure, distributed systems, and scalable backend platforms.",
   primaryCta: {
     label: "Explore Projects",
     href: "#work",
