@@ -4,9 +4,9 @@ export interface Project {
   tagline: string;
   description: string;
   tech: string[];
-  highlights: string[];
-  note?: string;
+  features: string[];
   github?: string;
+  note?: string;
 }
 
 export const featuredProjects: Project[] = [
@@ -15,7 +15,7 @@ export const featuredProjects: Project[] = [
     name: "LinkVault",
     tagline: "URL Shortening & Analytics API",
     description:
-      "A FastAPI service for authenticated URL management and public redirects, using PostgreSQL as the source of truth and Redis for caching and rate limiting.",
+      "A backend-focused URL shortening service built as a modular monolith, using PostgreSQL as the source of truth and Redis for redirect caching and rate limiting.",
     tech: [
       "Python",
       "FastAPI",
@@ -24,11 +24,13 @@ export const featuredProjects: Project[] = [
       "Docker",
       "GitHub Actions",
     ],
-    highlights: [
-      "JWT-authenticated URL management and click analytics",
-      "Redis redirect caching with PostgreSQL fallback when Redis is unavailable",
-      "Redis-backed rate limiting, automated tests, and CI",
-      "Local benchmark: cached redirects averaged 6.62 ms vs 9.04 ms for PostgreSQL-backed redirects (100 requests; not a production load test)",
+    features: [
+      "JWT-authenticated URL management",
+      "Redis redirect caching with PostgreSQL fallback",
+      "Redis-backed rate limiting and cache invalidation",
+      "Click analytics with daily aggregation",
+      "Automated tests and GitHub Actions CI",
+      "Locally benchmarked PostgreSQL and Redis redirect paths",
     ],
     github: "https://github.com/Mugheerik/LinkVault",
   },
@@ -37,7 +39,7 @@ export const featuredProjects: Project[] = [
     name: "TeamFlow",
     tagline: "Multi-Tenant Task Management API",
     description:
-      "A modular FastAPI backend for organizations, memberships, projects, and tasks, built around explicit tenant boundaries and server-side authorization.",
+      "A multi-tenant task management API focused on organization-scoped resources, server-side authorization, and secure backend design.",
     tech: [
       "Python",
       "FastAPI",
@@ -46,11 +48,12 @@ export const featuredProjects: Project[] = [
       "Docker",
       "GitHub Actions",
     ],
-    highlights: [
-      "Organization memberships with OWNER, ADMIN, and MEMBER roles",
-      "Server-side RBAC and organization-scoped resource access",
-      "PostgreSQL persistence, Alembic migrations, and schema integrity",
-      "Automated authentication, authorization, and cross-tenant access tests",
+    features: [
+      "Organization and membership management",
+      "OWNER, ADMIN, and MEMBER role-based access control",
+      "Server-side authorization and tenant data isolation",
+      "PostgreSQL persistence and Alembic migrations",
+      "Automated API and cross-tenant authorization tests",
     ],
     github: "https://github.com/Mugheerik/TeamFlow",
   },
@@ -59,7 +62,7 @@ export const featuredProjects: Project[] = [
     name: "Doc Service",
     tagline: "AI Document Processing Application",
     description:
-      "A full-stack application for uploading documents, tracking processing, and reviewing Gemini-generated analysis through a web interface.",
+      "A full-stack application for uploading documents, tracking asynchronous processing, and reviewing Gemini-generated analysis. Runs locally with Docker Compose and is not publicly deployed.",
     tech: [
       "Python",
       "FastAPI",
@@ -70,14 +73,16 @@ export const featuredProjects: Project[] = [
       "Docker Compose",
       "GitHub Actions",
     ],
-    highlights: [
-      "Authenticated PDF, DOCX, and TXT uploads with per-user document ownership",
-      "Asynchronous processing with persisted status and analysis results",
-      "Gemini-powered document analysis with error status handling",
-      "Frontend/backend integration, health checks, automated backend tests, and CI",
+    features: [
+      "Authenticated PDF, DOCX, and TXT uploads",
+      "User-level document ownership and access control",
+      "Background processing with persisted status and results",
+      "Gemini-powered document analysis",
+      "Integrated frontend, backend, and PostgreSQL workflow",
+      "Container health checks, automated tests, and CI",
     ],
-    note: "Runs locally; not publicly deployed. AI analysis requires a valid Gemini API key and available model quota.",
     github: "https://github.com/Mugheerik/doc-service",
+    note: "Runs locally; no public demo is available.",
   },
 ];
 
@@ -87,7 +92,7 @@ export const secondaryProjects: Project[] = [
     name: "CV Intelligence",
     tagline: "AI-Powered CV Analysis",
     description:
-      "A containerized full-stack application for CV uploads, text extraction, Gemini-powered feedback, analysis history, and document management.",
+      "A full-stack application for uploading CVs, extracting content, generating AI-powered feedback, and reviewing analysis history.",
     tech: [
       "Python",
       "FastAPI",
@@ -97,20 +102,22 @@ export const secondaryProjects: Project[] = [
       "Gemini API",
       "Docker",
     ],
-    highlights: [
-      "Authenticated document workflows and persisted analysis history",
-      "PostgreSQL, migrations, backend tests, and GitHub Actions CI",
+    features: [
+      "Authentication and document management",
+      "Text extraction and AI analysis",
+      "Persistent analysis history",
+      "Dockerized development and GitHub Actions CI",
     ],
     github: "https://github.com/Mugheerik/CV-Intelligence",
   },
   {
     id: "reliable-notes-api",
     name: "Reliable Notes API",
-    tagline: "Backend REST API",
+    tagline: "Backend API",
     description:
-      "A focused Python API project covering REST endpoints, PostgreSQL persistence, validation, and automated testing.",
+      "A focused REST API project covering authenticated note management, PostgreSQL persistence, validation, automated tests, and maintainable backend structure.",
     tech: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pytest"],
-    highlights: ["Authenticated API workflows, persistence, and automated tests"],
+    features: ["Authenticated API", "Relational persistence", "Automated tests"],
     github: "https://github.com/Mugheerik/reliable-notes-api",
   },
   {
@@ -118,35 +125,40 @@ export const secondaryProjects: Project[] = [
     name: "Healthcare Analytics Dashboard",
     tagline: "Data & Analytics",
     description:
-      "An analytics project using Python, PostgreSQL, dbt, and Power BI to transform healthcare data into analytical models and KPI reporting.",
+      "A data analytics project using Python, PostgreSQL, dbt, and Power BI to transform healthcare data into analytical models and KPI reporting.",
     tech: ["Python", "PostgreSQL", "SQL", "dbt", "Power BI", "DAX"],
-    highlights: [],
+    features: ["Data transformation", "Analytical modeling", "KPI reporting"],
   },
   {
     id: "stock-market-pipeline",
     name: "Stock Market Analytics Pipeline",
     tagline: "Data Pipeline & Analytics",
     description:
-      "A workflow for preparing, transforming, modeling, and visualizing stock market data.",
+      "A data workflow covering preparation, transformation, modeling, and visualization of stock market trends and performance metrics.",
     tech: ["Python", "SQL", "PostgreSQL", "dbt", "Power BI"],
-    highlights: [],
+    features: ["Data preparation", "Transformation", "Visualization"],
   },
   {
     id: "saas-funnel-analytics",
     name: "SaaS Funnel & Revenue Analytics",
     tagline: "Analytics Engineering",
     description:
-      "An analytics project exploring conversion funnels, customer lifecycle, MRR, churn, ARPU, and business KPIs.",
+      "An analytics project focused on customer lifecycle, conversion funnels, and revenue metrics including MRR, churn, and ARPU.",
     tech: ["Python", "SQL", "PostgreSQL", "dbt", "Power BI"],
-    highlights: [],
+    features: ["Funnel analysis", "Revenue metrics", "Business KPIs"],
   },
   {
     id: "news-broadcast",
     name: "News Broadcast Updates",
     tagline: "Final-Year Mobile Application",
     description:
-      "A university final-year project for hyper-local news, content moderation, real-time updates, Firebase services, and AI-assisted video summarization.",
+      "A community-driven hyper-local news platform developed as a BS Software Engineering final-year project, with location-based news, content moderation, Firebase services, and AI-assisted video summarization.",
     tech: ["React Native", "Expo", "JavaScript", "Firebase", "Python", "Flask"],
-    highlights: [],
+    features: [
+      "Location-based community news",
+      "Content moderation",
+      "Firebase-backed application services",
+      "AI-assisted video summarization",
+    ],
   },
 ];

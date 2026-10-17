@@ -4,10 +4,22 @@ export interface TimelineStage {
 }
 
 export const careerStages: TimelineStage[] = [
-  { label: "Backend Software Engineering", status: "current" },
-  { label: "Backend & Infrastructure Engineering", status: "developing" },
-  { label: "Distributed Systems Engineering", status: "direction" },
-  { label: "Cloud & AI Infrastructure Architecture", status: "direction" },
+  {
+    label: "Backend & Full-Stack Software Engineering",
+    status: "current",
+  },
+  {
+    label: "Backend & Infrastructure Engineering",
+    status: "developing",
+  },
+  {
+    label: "Distributed Systems Engineering",
+    status: "direction",
+  },
+  {
+    label: "Cloud & AI Infrastructure Architecture",
+    status: "direction",
+  },
 ];
 
 export interface LabArea {
@@ -17,15 +29,27 @@ export interface LabArea {
 
 export const labAreas: LabArea[] = [
   {
-    title: "Cloud Infrastructure",
-    description: "Building practical cloud and production engineering skills.",
+    title: "Backend Architecture",
+    description: "API design, data ownership, and maintainable application structure.",
+  },
+  {
+    title: "Cloud & Production",
+    description: "Cloud fundamentals, deployment practices, and service reliability.",
   },
   {
     title: "Distributed Systems",
-    description: "Learning system behavior, failure modes, and coordination.",
+    description: "Learning about coordination, consistency, and failure handling.",
   },
   {
-    title: "AI Infrastructure",
-    description: "Exploring reliable infrastructure for AI-enabled applications.",
+    title: "Data Engineering",
+    description: "Data pipelines, modeling, and data quality practices.",
+  },
+  {
+    title: "AI Integration",
+    description: "Integrating AI APIs into useful, tested application workflows.",
+  },
+  {
+    title: "Automation",
+    description: "Development workflows, CI, and operational automation.",
   },
 ];

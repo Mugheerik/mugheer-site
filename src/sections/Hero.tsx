@@ -68,7 +68,7 @@ export default function Hero() {
           {hero.supportingText}
         </p>
 
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-graphite-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-graphite-muted">
           {hero.secondaryText}
         </p>
 

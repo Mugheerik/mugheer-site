@@ -10,9 +10,7 @@ function ProjectCard({
 }) {
   return (
     <article
-      className={`bracket-frame flex h-full flex-col border border-line-strong bg-paper p-6 transition-colors hover:border-blueprint sm:p-7 ${
-        featured ? "bg-paper" : ""
-      }`}
+      className={`bracket-frame flex h-full flex-col border border-line-strong bg-paper p-6 sm:p-7 ${featured ? "lg:p-8" : ""}`}
     >
       <p className="drawing-label text-blueprint">{project.tagline}</p>
       <h3 className="mt-4 font-display text-xl font-semibold text-ink sm:text-2xl">
@@ -22,7 +20,7 @@ function ProjectCard({
         {project.description}
       </p>
 
-      <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${project.name} technologies`}>
+      <ul className="mt-5 flex flex-wrap gap-2">
         {project.tech.map((tech) => (
           <li
             key={tech}
@@ -33,19 +31,14 @@ function ProjectCard({
         ))}
       </ul>
 
-      {project.highlights.length > 0 && (
-        <ul className="mt-5 space-y-2 text-sm leading-relaxed text-ink-muted">
-          {project.highlights.map((highlight) => (
-            <li key={highlight} className="flex gap-2">
-              <span className="text-blueprint" aria-hidden="true">—</span>
-              <span>{highlight}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className="mt-5 flex-1 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink-muted marker:text-blueprint">
+        {project.features.map((feature) => (
+          <li key={feature}>{feature}</li>
+        ))}
+      </ul>
 
       {project.note && (
-        <p className="mt-4 border-l-2 border-signal pl-3 text-xs leading-relaxed text-ink-muted">
+        <p className="mt-4 border-l-2 border-signal pl-3 text-sm text-ink-muted">
           {project.note}
         </p>
       )}
@@ -55,9 +48,9 @@ function ProjectCard({
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-block font-mono text-xs uppercase tracking-[0.1em] text-blueprint hover:underline"
+          className="mt-6 inline-block w-fit font-mono text-xs uppercase tracking-[0.1em] text-blueprint hover:underline"
         >
-          View Repository →
+          View on GitHub →
         </a>
       )}
     </article>
@@ -74,27 +67,24 @@ export default function Work() {
         figure="03"
         title="Selected Work"
         eyebrow="Projects"
-        description="Completed applications demonstrating backend APIs, data ownership, caching, authorization, automated testing, and full-stack integration."
+        description="Completed applications that demonstrate backend API design, data and cache handling, authorization, automated testing, and full-stack integration."
       />
 
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
-        {featuredProjects.map((project) => (
-          <div
-            key={project.id}
-            className={project.id === "linkvault" ? "lg:col-span-2" : ""}
-          >
-            <ProjectCard project={project} featured />
+        {featuredProjects.map((project, index) => (
+          <div key={project.id} className={index === 0 ? "lg:col-span-2" : ""}>
+            <ProjectCard project={project} featured={index === 0} />
           </div>
         ))}
       </div>
 
       <div className="mt-16">
         <div className="flex items-center gap-4">
-          <p className="drawing-label">Additional Projects</p>
+          <p className="drawing-label">More Projects</p>
           <div className="h-px flex-1 bg-line" />
         </div>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {secondaryProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
