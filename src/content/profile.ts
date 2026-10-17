@@ -1,50 +1,43 @@
 export const profile = {
   name: "Mugheer Islam Khattak",
-
   role: "Software Engineer | Backend & Full-Stack Systems",
-
   location: "Abbottabad, Pakistan",
-
   email: "Mugheer.ik@gmail.com",
-
   github: "https://github.com/Mugheerik",
-
-  linkedin:
-    "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
-
+  linkedin: "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
   resumePath: "/Mugheer_Islam_Khattak_Resume.pdf",
 };
 
 export const hero = {
   supportingText:
-    "Software Engineering graduate focused on building reliable backend and full-stack systems with Python, TypeScript, FastAPI, React, PostgreSQL, and modern engineering practices. Developing toward cloud, distributed, and intelligent systems.",
-
+    "I build backend APIs and full-stack applications using Python, FastAPI, PostgreSQL, Redis, and TypeScript, with a focus on reliable, maintainable software.",
+  secondaryText:
+    "Currently focused on backend engineering, with a long-term interest in cloud infrastructure, distributed systems, and scalable backend platforms.",
   primaryCta: {
-    label: "Explore TeamFlow",
+    label: "Explore Projects",
     href: "#work",
   },
-
   secondaryCtas: [
+    {
+      label: "Resume",
+      href: "/Mugheer_Islam_Khattak_Resume.pdf",
+    },
     {
       label: "GitHub",
       href: "https://github.com/Mugheerik",
     },
     {
-      label: "Resume",
-      href: "/Mugheer_Islam_Khattak_Resume.pdf",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
     },
   ],
 };
 
 export const about = {
   paragraphs: [
-    "Mugheer Islam Khattak is a Software Engineering graduate focused on backend and full-stack software development, with an emphasis on reliable APIs, databases, application architecture, and production-oriented engineering.",
-
-    "His work combines Python backend development, FastAPI, PostgreSQL, React, TypeScript, automated testing, Docker, CI/CD, and practical software engineering practices.",
-
-    "He also brings experience with SQL, dbt, data modeling, analytics engineering, and Power BI, providing a strong data foundation that complements his software engineering work.",
-
-    "Long term, he is developing toward cloud and production engineering, distributed systems, AI systems engineering, and ultimately intelligent systems architecture.",
+    "I graduated with a BS in Software Engineering from COMSATS University Islamabad, Abbottabad Campus, in 2025. I build and document independent software projects to develop practical engineering skills.",
+    "My backend work covers REST APIs, authentication and authorization, PostgreSQL data modeling, Redis caching and rate limiting, automated tests, and Docker-based development. I also integrate frontend applications and AI APIs into complete application workflows.",
+    "My immediate focus is backend software engineering and backend-focused full-stack development. Over time, I aim to deepen my experience in cloud infrastructure, distributed systems, reliability, and AI infrastructure.",
   ],
 };
 
