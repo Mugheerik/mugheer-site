@@ -1,8 +1,11 @@
+export type SkillTone = "current" | "developing";
+
 export interface SkillCategory {
   id: string;
   figure: string;
   title: string;
   label: string;
+  tone?: SkillTone;
   items: string[];
 }
 
@@ -12,6 +15,7 @@ export const skillCategories: SkillCategory[] = [
     figure: "01",
     title: "Languages",
     label: "Core",
+    tone: "current",
     items: ["Python", "TypeScript", "JavaScript", "SQL"],
   },
   {
@@ -19,6 +23,7 @@ export const skillCategories: SkillCategory[] = [
     figure: "02",
     title: "Backend Development",
     label: "Primary Focus",
+    tone: "current",
     items: [
       "FastAPI",
       "REST APIs",
@@ -35,6 +40,7 @@ export const skillCategories: SkillCategory[] = [
     figure: "03",
     title: "Databases & Systems",
     label: "Backend",
+    tone: "current",
     items: [
       "PostgreSQL",
       "Redis",
@@ -50,6 +56,7 @@ export const skillCategories: SkillCategory[] = [
     figure: "04",
     title: "Testing & Development",
     label: "Applied",
+    tone: "current",
     items: [
       "Pytest",
       "HTTPX",
