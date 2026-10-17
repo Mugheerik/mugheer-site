@@ -1,4 +1,4 @@
-export type SkillTone = "current" | "developing";
+export type SkillTone = "current" | "supporting";
 
 export interface SkillCategory {
   id: string;

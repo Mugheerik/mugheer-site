@@ -10,14 +10,14 @@ const statusLabel: Record<string, string> = {
 export default function CareerDirection() {
   return (
     <section className="border-t border-line bg-paper-dim">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
         <SectionHeading
           figure="06"
           title="Career Direction"
-          description="A real trajectory, not a finished one. Earlier stages are established; later stages are where the effort is going."
+          description="My current focus is backend software engineering; cloud infrastructure and distributed systems are longer-term development goals."
         />
 
-        <ol className="mt-16 flex flex-col gap-0 md:flex-row md:items-start md:gap-0">
+        <ol className="mt-12 flex flex-col gap-0 md:flex-row md:items-start md:gap-0">
           {careerStages.map((stage, i) => (
             <li key={stage.label} className="relative flex flex-1 md:flex-col">
               <div className="flex flex-col items-start md:items-center md:text-center">
