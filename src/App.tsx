@@ -7,7 +7,6 @@ import EngineeringFocus from "./sections/EngineeringFocus";
 import Work from "./sections/Work";
 import Philosophy from "./sections/Philosophy";
 import CareerDirection from "./sections/CareerDirection";
-import EngineeringLab from "./sections/EngineeringLab";
 import Resume from "./sections/Resume";
 import Contact from "./sections/Contact";
 
@@ -30,7 +29,6 @@ function App() {
         <Work />
         <Philosophy />
         <CareerDirection />
-        <EngineeringLab />
         <Resume />
         <Contact />
       </main>
