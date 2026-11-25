@@ -43,16 +43,28 @@ function ProjectCard({
         </p>
       )}
 
-      {project.github && (
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 inline-block w-fit font-mono text-xs uppercase tracking-[0.1em] text-blueprint hover:underline"
-        >
-          View on GitHub →
-        </a>
-      )}
+      <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.1em]">
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="w-fit text-blueprint hover:underline"
+          >
+            View on GitHub →
+          </a>
+        )}
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="w-fit text-blueprint hover:underline"
+          >
+            Live Dashboard ↗
+          </a>
+        )}
+      </div>
     </article>
   );
 }
@@ -67,7 +79,7 @@ export default function Work() {
         figure="03"
         title="Selected Work"
         eyebrow="Projects"
-        description="Completed applications that demonstrate backend API design, data and cache handling, authorization, automated testing, and full-stack integration."
+        description="Data engineering and analytics projects first, supported by backend applications that demonstrate database design, API development, testing, and software engineering fundamentals."
       />
 
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -80,7 +92,7 @@ export default function Work() {
 
       <div className="mt-16">
         <div className="flex items-center gap-4">
-          <p className="drawing-label">More Projects</p>
+          <p className="drawing-label">Backend &amp; Other Projects</p>
           <div className="h-px flex-1 bg-line" />
         </div>
 
