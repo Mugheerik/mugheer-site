@@ -5,19 +5,19 @@ export interface TimelineStage {
 
 export const careerStages: TimelineStage[] = [
   {
-    label: "Backend & Full-Stack Software Engineering",
+    label: "Data Engineering & Analytics",
     status: "current",
   },
   {
-    label: "Backend & Infrastructure Engineering",
+    label: "Reliable Data Pipelines & Data Quality",
     status: "developing",
   },
   {
-    label: "Distributed Systems Engineering",
+    label: "Data Warehousing & Pipeline Orchestration",
     status: "direction",
   },
   {
-    label: "Cloud & AI Infrastructure Architecture",
+    label: "Data Infrastructure & Distributed Systems",
     status: "direction",
   },
 ];
@@ -29,27 +29,27 @@ export interface LabArea {
 
 export const labAreas: LabArea[] = [
   {
-    title: "Backend Architecture",
-    description: "API design, data ownership, and maintainable application structure.",
+    title: "Data Pipelines",
+    description: "API ingestion, incremental processing, validation, and reliable loading.",
   },
   {
-    title: "Cloud & Production",
-    description: "Cloud fundamentals, deployment practices, and service reliability.",
+    title: "Data Quality",
+    description: "Freshness, validation rules, pipeline observability, and trustworthy outputs.",
   },
   {
-    title: "Distributed Systems",
-    description: "Learning about coordination, consistency, and failure handling.",
+    title: "Data Warehousing",
+    description: "Dimensional modeling, analytical SQL, and structured reporting layers.",
   },
   {
-    title: "Data Engineering",
-    description: "Data pipelines, modeling, and data quality practices.",
+    title: "Orchestration",
+    description: "Learning workflow scheduling, dependencies, retries, and operational monitoring.",
   },
   {
-    title: "AI Integration",
-    description: "Integrating AI APIs into useful, tested application workflows.",
+    title: "Data Infrastructure",
+    description: "Cloud data platforms, storage systems, and scalable data processing foundations.",
   },
   {
-    title: "Automation",
-    description: "Development workflows, CI, and operational automation.",
+    title: "Backend Foundations",
+    description: "APIs, relational databases, testing, and service reliability.",
   },
 ];
