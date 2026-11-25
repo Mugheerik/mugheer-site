@@ -1,8 +1,8 @@
 export const profile = {
   name: "Mugheer Islam Khattak",
-  role: "Software Engineer | Backend & Full-Stack Systems",
+  role: "Data Engineer | Python, SQL & PostgreSQL",
   location: "Abbottabad, Pakistan",
-  email: "Mugheer.ik@gmail.com",
+  email: "mugheer.ik1@gmail.com",
   github: "https://github.com/Mugheerik",
   linkedin: "https://www.linkedin.com/in/mugheer-islam-khattak-7a1ab831b/",
   resumePath: "/Mugheer_Islam_Khattak_Resume.pdf",
@@ -10,9 +10,9 @@ export const profile = {
 
 export const hero = {
   supportingText:
-    "I build backend APIs and full-stack applications using Python, FastAPI, PostgreSQL, Redis, and TypeScript, with a focus on reliable, maintainable software.",
+    "I build Python and SQL data workflows that turn raw data into reliable, structured information, with hands-on work in API ingestion, PostgreSQL, data validation, incremental processing, and analytics.",
   secondaryText:
-    "Seeking junior backend and associate software engineering opportunities, while developing toward cloud infrastructure, distributed systems, and scalable backend platforms.",
+    "My software engineering background also includes backend APIs, database design, automated testing, and Docker. I am focused on junior Data Engineering and Analytics Engineering opportunities.",
   primaryCta: {
     label: "Explore Projects",
     href: "#work",
@@ -35,9 +35,9 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    "I graduated with a BS in Software Engineering from COMSATS University Islamabad, Abbottabad Campus, in 2025. I build and document independent software projects to develop practical engineering skills.",
-    "My backend work covers REST APIs, authentication and authorization, PostgreSQL data modeling, Redis caching and rate limiting, automated tests, and Docker-based development. I also integrate frontend applications and AI APIs into complete application workflows.",
-    "My immediate focus is backend software engineering and backend-focused full-stack development. Over time, I aim to deepen my experience in cloud infrastructure, distributed systems, reliability, and AI infrastructure.",
+    "I graduated with a BS in Software Engineering from COMSATS University Islamabad, Abbottabad Campus, in 2025. I am focused on data engineering: building dependable workflows that ingest, validate, transform, and store data for downstream use.",
+    "My practical work includes EnviroTrack, a weather-data platform using the Open-Meteo API, Python, and PostgreSQL. It preserves raw source data, validates and normalizes hourly records, performs idempotent upserts, tracks pipeline quality and freshness, and exposes results through a deployed Streamlit dashboard.",
+    "My software engineering foundation includes FastAPI, relational database design, migrations, authentication and authorization, automated testing, Docker, and CI. I am continuing to deepen my skills in orchestration, data warehousing, and reliable data platforms.",
   ],
 };
 
