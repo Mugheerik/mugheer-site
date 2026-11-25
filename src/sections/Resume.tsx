@@ -17,8 +17,8 @@ export default function Resume() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
         <SectionHeading
           figure="07"
-          title="Resume & Certifications"
-          description="Education and completed certifications, alongside a concise overview of my data engineering and software engineering projects."
+          title="Resume, Education & Certifications"
+          description="My academic background and completed professional learning, alongside selected data engineering and software projects."
         />
 
         <div className="mt-8 flex flex-col items-start gap-6 border border-line-strong bg-paper p-8 sm:flex-row sm:items-center sm:justify-between">
@@ -37,6 +37,16 @@ export default function Resume() {
           >
             Download Resume
           </a>
+        </div>
+
+        <div className="mt-10 border-l-2 border-blueprint pl-5">
+          <p className="drawing-label text-blueprint">Education</p>
+          <h3 className="mt-3 font-display text-lg font-semibold text-ink">
+            B.S. Software Engineering
+          </h3>
+          <p className="mt-1 text-sm text-ink-muted">
+            COMSATS University Islamabad, Abbottabad Campus · 2021–2025
+          </p>
         </div>
 
         <div className="mt-10">
